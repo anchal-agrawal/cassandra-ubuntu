@@ -1,0 +1,17 @@
+# Sample file for a node with IP 10.3.0.5
+# This example uses 2 seed nodes with IPs 10.3.0.6 and 10.3.0.7
+
+# Cluster name. Should be the same for all nodes.
+cluster_name: 'lcdm'
+
+# IPs of seed nodes.
+seed_provider:
+    - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+      parameters:
+          - seeds: "10.3.0.6,10.3.0.7"
+
+# Internal IP of the current node.
+listen_address: 10.3.0.5
+broadcast_rpc_address: 10.3.0.5
+
+rpc_address: 0.0.0.0
